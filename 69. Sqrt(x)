@@ -5,8 +5,8 @@ public:
        int e=x;
         int ans=0;
        while(s<=e){
-        int mid=s+(e-s)/2;
-        int sq=mid*mid;
+        long mid=s+(e-s)/2;
+        long sq=mid*mid;
        
          if((sq)==x){
             return mid;
