@@ -1,0 +1,24 @@
+class Solution {
+public:
+    int maxFreqSum(string s) {
+        unordered_map<char, int> a;
+        for (auto i : s) {
+            a[i]++;
+        }
+        int max_v = 0;
+        int max_c = 0;
+        for (auto i : a) {
+            if (i.first == 'a' || i.first == 'e' || i.first == 'i' ||
+                i.first == 'o' || i.first == 'u') {
+                if (i.second > max_v) {
+                    max_v = i.second;
+                }
+            } else {
+                if (i.second > max_c) {
+                    max_c = i.second;
+                }
+            }
+        }
+        return max_c + max_v;
+    }
+};
